@@ -56,6 +56,13 @@
 <!-- ========================= MISSION BOARD ========================= -->
 <img src="assets/mission.svg" width="100%" alt="Mission Board — objectives this arc" />
 
+<!-- ========================= CROW RADIO ========================= -->
+<!-- Animated now-playing card; clicking opens the track on Spotify.
+     Swap the href for any track/playlist/album URL you like. -->
+<a href="https://open.spotify.com/album/7usQiUfbKEGY1rJ8h4RMM8">
+  <img src="assets/radio.svg" width="100%" alt="Crow Radio — now playing: Gurenge by LiSA (click to open on Spotify)" />
+</a>
+
 <!-- ====================== WORD OF THE DAY ====================== -->
 <!-- assets/quote.svg is regenerated every day by
      .github/workflows/daily-quote.yml — a new Japanese proverb each day.
@@ -71,9 +78,9 @@
 
 <!-- TODO: replace handles + email with your real ones -->
 <a href="https://github.com/dearie-de-cybek"><img src="https://img.shields.io/badge/GitHub-15111a?style=for-the-badge&logo=github&logoColor=f48fb1" alt="github" /></a>
-<a href="https://linkedin.com/in/dearie"><img src="https://img.shields.io/badge/LinkedIn-15111a?style=for-the-badge&logo=linkedin&logoColor=b69ce0" alt="linkedin" /></a>
-<a href="https://x.com/dearie"><img src="https://img.shields.io/badge/X-15111a?style=for-the-badge&logo=x&logoColor=f1eaef" alt="x" /></a>
-<a href="mailto:hello@dearie.dev"><img src="https://img.shields.io/badge/Email-d76a93?style=for-the-badge&logo=gmail&logoColor=white" alt="email" /></a>
+<a href="https://www.linkedin.com/in/dearie-eburu-998a0b391/"><img src="https://img.shields.io/badge/LinkedIn-15111a?style=for-the-badge&logo=linkedin&logoColor=b69ce0" alt="linkedin" /></a>
+<a href="https://x.com/Dearie_de_cybek"><img src="https://img.shields.io/badge/X-15111a?style=for-the-badge&logo=x&logoColor=f1eaef" alt="x" /></a>
+<a href="mailto:eburujacintha@gmail.com"><img src="https://img.shields.io/badge/Email-d76a93?style=for-the-badge&logo=gmail&logoColor=white" alt="email" /></a>
 
 </div>
 

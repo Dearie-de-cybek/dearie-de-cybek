@@ -504,7 +504,7 @@ def radio():
     out.append(f'<g clip-path="url(#art)"><ellipse cx="100" cy="200" rx="90" ry="70" fill="url(#glowR)"/>'
                f'<text x="100" y="280" font-family="{SERIF}" font-size="92" fill="{ROSE}" fill-opacity="0.85" text-anchor="middle">音</text></g>')
     # meta
-    out.append(f'<text x="190" y="206" font-family="{MONO}" font-size="11" letter-spacing="2" fill="{BAMBOO}">CROW RADIO · NOW PLAYING — click to open the playlist</text>')
+    out.append(f'<text x="190" y="206" font-family="{MONO}" font-size="11" letter-spacing="2" fill="{BAMBOO}">CROW RADIO · NOW PLAYING — click to play on Spotify</text>')
     out.append(f'<text x="190" y="240" font-family="{SERIF}" font-size="26" font-weight="700" fill="{TEXT}">Gurenge</text>')
     out.append(f'<text x="190" y="264" font-family="{SANS}" font-size="14" fill="{MUT}">LiSA · Demon Slayer OST</text>')
     out.append(f'<rect x="190" y="284" width="600" height="6" rx="3" fill="{BORDER}"/>')
@@ -617,6 +617,7 @@ if __name__=="__main__":
     write("intermission.svg",intermission())
     write("telemetry.svg",telemetry())
     write("mission.svg",mission())
+    write("radio.svg",radio())
     write("quote.svg",quote_svg())
     write("footer.svg",footer())
     write("connect_head.svg",head('烏','Crow','Connect'))
