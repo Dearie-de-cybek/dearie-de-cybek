@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 60" width="1000" height="60">
+<defs>
+  <linearGradient id="title" x1="0" y1="0" x2="1" y2="0.4">
+    <stop offset="0" stop-color="#f1eaef"/><stop offset="0.45" stop-color="#f48fb1"/>
+    <stop offset="0.72" stop-color="#d76a93"/><stop offset="1" stop-color="#e8a86a"/>
+  </linearGradient>
+  <linearGradient id="rosefade" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#f48fb1" stop-opacity="0"/><stop offset="1" stop-color="#f48fb1"/>
+  </linearGradient>
+  <linearGradient id="petal" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#fcdfe8"/><stop offset="1" stop-color="#f48fb1"/>
+  </linearGradient>
+  <linearGradient id="petal2" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#f48fb1"/><stop offset="1" stop-color="#d76a93"/>
+  </linearGradient>
+  <radialGradient id="glowR" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#f48fb1" stop-opacity="0.18"/><stop offset="1" stop-color="#f48fb1" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="glowW" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#b69ce0" stop-opacity="0.16"/><stop offset="1" stop-color="#b69ce0" stop-opacity="0"/>
+  </radialGradient>
+  
+</defs><style>.pf{animation-name:fall;animation-timing-function:linear;animation-iteration-count:infinite}
+    @keyframes fall{
+      0%{transform:translate(0,-20px) rotate(0deg);opacity:0}
+      12%{opacity:.7}
+      88%{opacity:.7}
+      100%{transform:translate(var(--dx,18px),84px) rotate(var(--rot,320deg));opacity:0}
+    }</style>
+<rect width="1000" height="60" fill="none"/>
+<line x1="40" y1="30" x2="430" y2="30" stroke="#2f2636"/>
+<line x1="570" y1="30" x2="960" y2="30" stroke="#2f2636"/>
+<rect x="495" y="25" width="10" height="10" rx="2" transform="rotate(45 500 30)" fill="#f48fb1"/>
+<g><g class="pf" style="animation-duration:7.0s;animation-delay:-4.0s;--dx:-16px;--rot:280deg" transform="translate(17.4,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.3" transform="scale(0.55)"/></g>
+<g class="pf" style="animation-duration:8.9s;animation-delay:-5.6s;--dx:24px;--rot:320deg" transform="translate(27.1,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.46" transform="scale(0.77)"/></g>
+<g class="pf" style="animation-duration:10.8s;animation-delay:-7.2s;--dx:-4px;--rot:360deg" transform="translate(36.8,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.62" transform="scale(0.99)"/></g>
+<g class="pf" style="animation-duration:12.7s;animation-delay:-8.8s;--dx:18px;--rot:400deg" transform="translate(46.5,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.3" transform="scale(1.21)"/></g>
+<g class="pf" style="animation-duration:14.6s;animation-delay:-10.4s;--dx:-10px;--rot:280deg" transform="translate(56.2,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.46" transform="scale(0.55)"/></g>
+<g class="pf" style="animation-duration:7.0s;animation-delay:-12.0s;--dx:30px;--rot:320deg" transform="translate(65.9,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.62" transform="scale(0.77)"/></g>
+<g class="pf" style="animation-duration:8.9s;animation-delay:-13.6s;--dx:-16px;--rot:360deg" transform="translate(75.6,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.3" transform="scale(0.99)"/></g>
+<g class="pf" style="animation-duration:10.8s;animation-delay:-15.2s;--dx:24px;--rot:400deg" transform="translate(85.3,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.46" transform="scale(1.21)"/></g>
+<g class="pf" style="animation-duration:12.7s;animation-delay:-16.8s;--dx:-4px;--rot:280deg" transform="translate(95.0,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.62" transform="scale(0.55)"/></g>
+<g class="pf" style="animation-duration:14.6s;animation-delay:-18.4s;--dx:18px;--rot:320deg" transform="translate(104.7,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.3" transform="scale(0.77)"/></g>
+<g class="pf" style="animation-duration:7.0s;animation-delay:-20.0s;--dx:-10px;--rot:360deg" transform="translate(114.4,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.46" transform="scale(0.99)"/></g>
+<g class="pf" style="animation-duration:8.9s;animation-delay:-21.6s;--dx:30px;--rot:400deg" transform="translate(124.1,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.62" transform="scale(1.21)"/></g>
+<g class="pf" style="animation-duration:10.8s;animation-delay:-23.2s;--dx:-16px;--rot:280deg" transform="translate(133.8,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.3" transform="scale(0.55)"/></g>
+<g class="pf" style="animation-duration:12.7s;animation-delay:-24.8s;--dx:24px;--rot:320deg" transform="translate(143.5,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.46" transform="scale(0.77)"/></g>
+<g class="pf" style="animation-duration:14.6s;animation-delay:-26.4s;--dx:-4px;--rot:360deg" transform="translate(153.2,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.62" transform="scale(0.99)"/></g>
+<g class="pf" style="animation-duration:7.0s;animation-delay:-28.0s;--dx:18px;--rot:400deg" transform="translate(162.9,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.3" transform="scale(1.21)"/></g></g>
+</svg>

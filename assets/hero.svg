@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="1000" height="360">
+<defs>
+  <linearGradient id="title" x1="0" y1="0" x2="1" y2="0.4">
+    <stop offset="0" stop-color="#f1eaef"/><stop offset="0.45" stop-color="#f48fb1"/>
+    <stop offset="0.72" stop-color="#d76a93"/><stop offset="1" stop-color="#e8a86a"/>
+  </linearGradient>
+  <linearGradient id="rosefade" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#f48fb1" stop-opacity="0"/><stop offset="1" stop-color="#f48fb1"/>
+  </linearGradient>
+  <linearGradient id="petal" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#fcdfe8"/><stop offset="1" stop-color="#f48fb1"/>
+  </linearGradient>
+  <linearGradient id="petal2" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#f48fb1"/><stop offset="1" stop-color="#d76a93"/>
+  </linearGradient>
+  <radialGradient id="glowR" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#f48fb1" stop-opacity="0.18"/><stop offset="1" stop-color="#f48fb1" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="glowW" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#b69ce0" stop-opacity="0.16"/><stop offset="1" stop-color="#b69ce0" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="wisg" cx="0.5" cy="0.3" r="0.7">
+      <stop offset="0" stop-color="#d9c2f2"/><stop offset="0.6" stop-color="#b69ce0"/>
+      <stop offset="1" stop-color="#7d5fb0"/></radialGradient>
+    <clipPath id="hclip"><rect width="1000" height="360" rx="20"/></clipPath>
+</defs>
+<style>.sway{transform-box:fill-box;transform-origin:top center;animation:sway 6s ease-in-out infinite}
+    @keyframes sway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+    .sheen{animation:sheen 8s ease-in-out infinite}
+    @keyframes sheen{0%,100%{transform:translateX(-12px)}50%{transform:translateX(12px)}}
+    .pulse{animation:pulse 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+    .cur{animation:blink 1.05s step-end infinite}
+    @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+    .pf{animation-name:fall;animation-timing-function:linear;animation-iteration-count:infinite}
+    @keyframes fall{
+      0%{transform:translate(0,-20px) rotate(0deg);opacity:0}
+      12%{opacity:.7}
+      88%{opacity:.7}
+      100%{transform:translate(var(--dx,18px),384px) rotate(var(--rot,320deg));opacity:0}
+    }</style>
+<g clip-path="url(#hclip)">
+  <rect width="1000" height="360" fill="#0c0a0d"/>
+  <ellipse cx="150" cy="40" rx="430" ry="300" fill="url(#glowW)"/>
+  <ellipse cx="950" cy="120" rx="430" ry="320" fill="url(#glowR)"/>
+  <defs><pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#ffffff" fill-opacity="0.022"/></pattern></defs><rect width="1000" height="360" fill="url(#dots)"/>
+  <!-- giant faint kanji watermark: 鬼を斬る = slay demons -->
+  <text x="980" y="300" font-family="'Yu Mincho','Hiragino Mincho ProN','Zen Old Mincho','Songti SC',serif" font-size="300" fill="#f48fb1" fill-opacity="0.05" text-anchor="end">鬼</text>
+
+  <!-- wisteria drooping from top-right -->
+  <g class="sway"><g class="sway" style="animation-delay:0.0s" transform="translate(0,0) scale(1.0)"><line x1="0" y1="0" x2="0" y2="22" stroke="#8fc07a" stroke-width="1.6" opacity="0.5"/><circle cx="-2" cy="22" r="7.0" fill="url(#wisg)" opacity="0.90"/><circle cx="-9" cy="30" r="5.6" fill="url(#wisg)" opacity="0.80"/><circle cx="5" cy="30" r="5.6" fill="url(#wisg)" opacity="0.80"/><circle cx="3" cy="38" r="6.3" fill="url(#wisg)" opacity="0.82"/><circle cx="-4" cy="46" r="5.0" fill="url(#wisg)" opacity="0.72"/><circle cx="10" cy="46" r="5.0" fill="url(#wisg)" opacity="0.72"/><circle cx="-2" cy="54" r="5.6" fill="url(#wisg)" opacity="0.74"/><circle cx="-9" cy="62" r="4.5" fill="url(#wisg)" opacity="0.64"/><circle cx="5" cy="62" r="4.5" fill="url(#wisg)" opacity="0.64"/><circle cx="3" cy="70" r="4.9" fill="url(#wisg)" opacity="0.66"/><circle cx="-4" cy="78" r="3.9" fill="url(#wisg)" opacity="0.56"/><circle cx="10" cy="78" r="3.9" fill="url(#wisg)" opacity="0.56"/><circle cx="-2" cy="86" r="4.2" fill="url(#wisg)" opacity="0.58"/><circle cx="-9" cy="94" r="3.4" fill="url(#wisg)" opacity="0.48"/><circle cx="5" cy="94" r="3.4" fill="url(#wisg)" opacity="0.48"/><circle cx="3" cy="102" r="3.5" fill="url(#wisg)" opacity="0.50"/><circle cx="-4" cy="110" r="2.8" fill="url(#wisg)" opacity="0.40"/><circle cx="10" cy="110" r="2.8" fill="url(#wisg)" opacity="0.40"/></g></g>
+  <g transform="translate(872,-6)"><g class="sway" style="animation-delay:0.8s" transform="translate(0,0) scale(1.15)"><line x1="0" y1="0" x2="0" y2="22" stroke="#8fc07a" stroke-width="1.6" opacity="0.5"/><circle cx="-2" cy="22" r="7.0" fill="url(#wisg)" opacity="0.90"/><circle cx="-9" cy="30" r="5.6" fill="url(#wisg)" opacity="0.80"/><circle cx="5" cy="30" r="5.6" fill="url(#wisg)" opacity="0.80"/><circle cx="3" cy="38" r="6.3" fill="url(#wisg)" opacity="0.82"/><circle cx="-4" cy="46" r="5.0" fill="url(#wisg)" opacity="0.72"/><circle cx="10" cy="46" r="5.0" fill="url(#wisg)" opacity="0.72"/><circle cx="-2" cy="54" r="5.6" fill="url(#wisg)" opacity="0.74"/><circle cx="-9" cy="62" r="4.5" fill="url(#wisg)" opacity="0.64"/><circle cx="5" cy="62" r="4.5" fill="url(#wisg)" opacity="0.64"/><circle cx="3" cy="70" r="4.9" fill="url(#wisg)" opacity="0.66"/><circle cx="-4" cy="78" r="3.9" fill="url(#wisg)" opacity="0.56"/><circle cx="10" cy="78" r="3.9" fill="url(#wisg)" opacity="0.56"/><circle cx="-2" cy="86" r="4.2" fill="url(#wisg)" opacity="0.58"/><circle cx="-9" cy="94" r="3.4" fill="url(#wisg)" opacity="0.48"/><circle cx="5" cy="94" r="3.4" fill="url(#wisg)" opacity="0.48"/><circle cx="3" cy="102" r="3.5" fill="url(#wisg)" opacity="0.50"/><circle cx="-4" cy="110" r="2.8" fill="url(#wisg)" opacity="0.40"/><circle cx="10" cy="110" r="2.8" fill="url(#wisg)" opacity="0.40"/></g></g>
+  <g transform="translate(936,-2)"><g class="sway" style="animation-delay:1.6s" transform="translate(0,0) scale(0.95)"><line x1="0" y1="0" x2="0" y2="22" stroke="#8fc07a" stroke-width="1.6" opacity="0.5"/><circle cx="-2" cy="22" r="7.0" fill="url(#wisg)" opacity="0.90"/><circle cx="-9" cy="30" r="5.6" fill="url(#wisg)" opacity="0.80"/><circle cx="5" cy="30" r="5.6" fill="url(#wisg)" opacity="0.80"/><circle cx="3" cy="38" r="6.3" fill="url(#wisg)" opacity="0.82"/><circle cx="-4" cy="46" r="5.0" fill="url(#wisg)" opacity="0.72"/><circle cx="10" cy="46" r="5.0" fill="url(#wisg)" opacity="0.72"/><circle cx="-2" cy="54" r="5.6" fill="url(#wisg)" opacity="0.74"/><circle cx="-9" cy="62" r="4.5" fill="url(#wisg)" opacity="0.64"/><circle cx="5" cy="62" r="4.5" fill="url(#wisg)" opacity="0.64"/><circle cx="3" cy="70" r="4.9" fill="url(#wisg)" opacity="0.66"/><circle cx="-4" cy="78" r="3.9" fill="url(#wisg)" opacity="0.56"/><circle cx="10" cy="78" r="3.9" fill="url(#wisg)" opacity="0.56"/><circle cx="-2" cy="86" r="4.2" fill="url(#wisg)" opacity="0.58"/><circle cx="-9" cy="94" r="3.4" fill="url(#wisg)" opacity="0.48"/><circle cx="5" cy="94" r="3.4" fill="url(#wisg)" opacity="0.48"/></g></g>
+  <g transform="translate(812,-4)"><g class="sway" style="animation-delay:0.4s" transform="translate(0,0) scale(0.85)"><line x1="0" y1="0" x2="0" y2="22" stroke="#8fc07a" stroke-width="1.6" opacity="0.5"/><circle cx="-2" cy="22" r="7.0" fill="url(#wisg)" opacity="0.90"/><circle cx="-9" cy="30" r="5.6" fill="url(#wisg)" opacity="0.80"/><circle cx="5" cy="30" r="5.6" fill="url(#wisg)" opacity="0.80"/><circle cx="3" cy="38" r="6.3" fill="url(#wisg)" opacity="0.82"/><circle cx="-4" cy="46" r="5.0" fill="url(#wisg)" opacity="0.72"/><circle cx="10" cy="46" r="5.0" fill="url(#wisg)" opacity="0.72"/><circle cx="-2" cy="54" r="5.6" fill="url(#wisg)" opacity="0.74"/><circle cx="-9" cy="62" r="4.5" fill="url(#wisg)" opacity="0.64"/><circle cx="5" cy="62" r="4.5" fill="url(#wisg)" opacity="0.64"/><circle cx="3" cy="70" r="4.9" fill="url(#wisg)" opacity="0.66"/><circle cx="-4" cy="78" r="3.9" fill="url(#wisg)" opacity="0.56"/><circle cx="10" cy="78" r="3.9" fill="url(#wisg)" opacity="0.56"/><circle cx="-2" cy="86" r="4.2" fill="url(#wisg)" opacity="0.58"/><circle cx="-9" cy="94" r="3.4" fill="url(#wisg)" opacity="0.48"/><circle cx="5" cy="94" r="3.4" fill="url(#wisg)" opacity="0.48"/></g></g>
+
+  <!-- falling sakura -->
+  <g><g class="pf" style="animation-duration:10.0s;animation-delay:-1.0s;--dx:-16px;--rot:280deg" transform="translate(8.1,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.3" transform="scale(0.55)"/></g>
+<g class="pf" style="animation-duration:11.9s;animation-delay:-2.6s;--dx:24px;--rot:320deg" transform="translate(17.8,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.46" transform="scale(0.77)"/></g>
+<g class="pf" style="animation-duration:13.8s;animation-delay:-4.2s;--dx:-4px;--rot:360deg" transform="translate(27.5,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.62" transform="scale(0.99)"/></g>
+<g class="pf" style="animation-duration:15.7s;animation-delay:-5.8s;--dx:18px;--rot:400deg" transform="translate(37.2,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.3" transform="scale(1.21)"/></g>
+<g class="pf" style="animation-duration:17.6s;animation-delay:-7.4s;--dx:-10px;--rot:280deg" transform="translate(46.9,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.46" transform="scale(0.55)"/></g>
+<g class="pf" style="animation-duration:10.0s;animation-delay:-9.0s;--dx:30px;--rot:320deg" transform="translate(56.6,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.62" transform="scale(0.77)"/></g>
+<g class="pf" style="animation-duration:11.9s;animation-delay:-10.6s;--dx:-16px;--rot:360deg" transform="translate(66.3,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.3" transform="scale(0.99)"/></g>
+<g class="pf" style="animation-duration:13.8s;animation-delay:-12.2s;--dx:24px;--rot:400deg" transform="translate(76.0,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.46" transform="scale(1.21)"/></g>
+<g class="pf" style="animation-duration:15.7s;animation-delay:-13.8s;--dx:-4px;--rot:280deg" transform="translate(85.7,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.62" transform="scale(0.55)"/></g>
+<g class="pf" style="animation-duration:17.6s;animation-delay:-15.4s;--dx:18px;--rot:320deg" transform="translate(95.4,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.3" transform="scale(0.77)"/></g>
+<g class="pf" style="animation-duration:10.0s;animation-delay:-17.0s;--dx:-10px;--rot:360deg" transform="translate(105.1,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.46" transform="scale(0.99)"/></g>
+<g class="pf" style="animation-duration:11.9s;animation-delay:-18.6s;--dx:30px;--rot:400deg" transform="translate(114.8,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.62" transform="scale(1.21)"/></g>
+<g class="pf" style="animation-duration:13.8s;animation-delay:-20.2s;--dx:-16px;--rot:280deg" transform="translate(124.5,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.3" transform="scale(0.55)"/></g></g>
+
+  <!-- text block -->
+  <g transform="translate(56,118)">
+    <rect x="0" y="-26" width="20" height="7" rx="3" fill="#8fc07a"/>
+    <text x="30" y="-19" font-family="'Cascadia Code','Consolas','SFMono-Regular',ui-monospace,monospace" font-size="13" letter-spacing="2" fill="#f48fb1">// kisatsutai · software engineer</text>
+    <text x="-2" y="78" font-family="'Yu Mincho','Hiragino Mincho ProN','Zen Old Mincho','Songti SC',serif" font-size="116" font-weight="700" fill="url(#title)" letter-spacing="-1">Dearie</text>
+    <text x="2" y="120" font-family="'Yu Mincho','Hiragino Mincho ProN','Zen Old Mincho','Songti SC',serif" font-size="23" fill="#f1eaef">Full-stack developer &amp; interface artisan</text>
+    <text x="2" y="156" font-family="'Cascadia Code','Consolas','SFMono-Regular',ui-monospace,monospace" font-size="14.5" fill="#f48fb1">I build calm systems under pressure<tspan class="cur" fill="#e8a86a">▌</tspan></text>
+    <g transform="translate(2,184)" font-family="'Cascadia Code','Consolas','SFMono-Regular',ui-monospace,monospace" font-size="12.5">
+      <circle class="pulse" cx="6" cy="-4" r="5" fill="#8fc07a"/>
+      <text x="18" y="0" fill="#a99fb0">open to missions · total concentration · remote-first</text>
+    </g>
+  </g>
+  <rect x="0" y="0" width="1000" height="360" rx="20" fill="none" stroke="#2f2636"/>
+</g>
+</svg>

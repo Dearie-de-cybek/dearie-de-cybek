@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 130" width="1000" height="130">
+<defs>
+  <linearGradient id="title" x1="0" y1="0" x2="1" y2="0.4">
+    <stop offset="0" stop-color="#f1eaef"/><stop offset="0.45" stop-color="#f48fb1"/>
+    <stop offset="0.72" stop-color="#d76a93"/><stop offset="1" stop-color="#e8a86a"/>
+  </linearGradient>
+  <linearGradient id="rosefade" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#f48fb1" stop-opacity="0"/><stop offset="1" stop-color="#f48fb1"/>
+  </linearGradient>
+  <linearGradient id="petal" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#fcdfe8"/><stop offset="1" stop-color="#f48fb1"/>
+  </linearGradient>
+  <linearGradient id="petal2" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#f48fb1"/><stop offset="1" stop-color="#d76a93"/>
+  </linearGradient>
+  <radialGradient id="glowR" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#f48fb1" stop-opacity="0.18"/><stop offset="1" stop-color="#f48fb1" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="glowW" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#b69ce0" stop-opacity="0.16"/><stop offset="1" stop-color="#b69ce0" stop-opacity="0"/>
+  </radialGradient>
+  
+</defs><style>.pf{animation-name:fall;animation-timing-function:linear;animation-iteration-count:infinite}
+    @keyframes fall{
+      0%{transform:translate(0,-20px) rotate(0deg);opacity:0}
+      12%{opacity:.7}
+      88%{opacity:.7}
+      100%{transform:translate(var(--dx,18px),144px) rotate(var(--rot,320deg));opacity:0}
+    }</style>
+<g opacity="0.7"><g class="pf" style="animation-duration:8.0s;animation-delay:-7.0s;--dx:-16px;--rot:280deg" transform="translate(26.7,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.3" transform="scale(0.55)"/></g>
+<g class="pf" style="animation-duration:9.9s;animation-delay:-8.6s;--dx:24px;--rot:320deg" transform="translate(36.4,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.46" transform="scale(0.77)"/></g>
+<g class="pf" style="animation-duration:11.8s;animation-delay:-10.2s;--dx:-4px;--rot:360deg" transform="translate(46.1,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.62" transform="scale(0.99)"/></g>
+<g class="pf" style="animation-duration:13.7s;animation-delay:-11.8s;--dx:18px;--rot:400deg" transform="translate(55.8,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.3" transform="scale(1.21)"/></g>
+<g class="pf" style="animation-duration:15.6s;animation-delay:-13.4s;--dx:-10px;--rot:280deg" transform="translate(65.5,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.46" transform="scale(0.55)"/></g>
+<g class="pf" style="animation-duration:8.0s;animation-delay:-15.0s;--dx:30px;--rot:320deg" transform="translate(75.2,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.62" transform="scale(0.77)"/></g>
+<g class="pf" style="animation-duration:9.9s;animation-delay:-16.6s;--dx:-16px;--rot:360deg" transform="translate(84.9,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.3" transform="scale(0.99)"/></g>
+<g class="pf" style="animation-duration:11.8s;animation-delay:-18.2s;--dx:24px;--rot:400deg" transform="translate(94.6,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.46" transform="scale(1.21)"/></g>
+<g class="pf" style="animation-duration:13.7s;animation-delay:-19.8s;--dx:-4px;--rot:280deg" transform="translate(104.3,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.62" transform="scale(0.55)"/></g>
+<g class="pf" style="animation-duration:15.6s;animation-delay:-21.4s;--dx:18px;--rot:320deg" transform="translate(114.0,0)"><path d="M6.5,0 C11,3 11.5,10 6.5,15 C1.5,10 2,3 6.5,0 Z" fill="url(#petal)" fill-opacity="0.3" transform="scale(0.77)"/></g></g>
+<g transform="translate(500,40)">
+  <rect x="-90" y="0" width="70" height="1.2" fill="url(#rosefade)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="4" transform="rotate(45 0 0)" fill="url(#petal2)"/>
+  <rect x="20" y="0" width="70" height="1.2" fill="url(#rosefade)" transform="scale(-1,1)"/>
+</g>
+<text x="500" y="86" font-family="'Cascadia Code','Consolas','SFMono-Regular',ui-monospace,monospace" font-size="12.5" letter-spacing="3" fill="#a99fb0" text-anchor="middle">SLAYING BUGS, ONE COMMIT AT A TIME</text>
+<text x="500" y="110" font-family="'Cascadia Code','Consolas','SFMono-Regular',ui-monospace,monospace" font-size="12.5" letter-spacing="3" fill="#f48fb1" text-anchor="middle">· FROM THE WISTERIA GARDEN ·</text>
+</svg>

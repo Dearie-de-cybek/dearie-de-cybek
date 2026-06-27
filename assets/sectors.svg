@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="1000" height="360">
+<defs>
+  <linearGradient id="title" x1="0" y1="0" x2="1" y2="0.4">
+    <stop offset="0" stop-color="#f1eaef"/><stop offset="0.45" stop-color="#f48fb1"/>
+    <stop offset="0.72" stop-color="#d76a93"/><stop offset="1" stop-color="#e8a86a"/>
+  </linearGradient>
+  <linearGradient id="rosefade" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#f48fb1" stop-opacity="0"/><stop offset="1" stop-color="#f48fb1"/>
+  </linearGradient>
+  <linearGradient id="petal" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#fcdfe8"/><stop offset="1" stop-color="#f48fb1"/>
+  </linearGradient>
+  <linearGradient id="petal2" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#f48fb1"/><stop offset="1" stop-color="#d76a93"/>
+  </linearGradient>
+  <radialGradient id="glowR" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#f48fb1" stop-opacity="0.18"/><stop offset="1" stop-color="#f48fb1" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="glowW" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#b69ce0" stop-opacity="0.16"/><stop offset="1" stop-color="#b69ce0" stop-opacity="0"/>
+  </radialGradient>
+  
+</defs>
+<text x="500" y="40" font-family="'Yu Mincho','Hiragino Mincho ProN','Zen Old Mincho','Songti SC',serif" font-size="30" fill="#f48fb1" text-anchor="middle">戦</text>
+<text x="500" y="84" font-family="'Yu Mincho','Hiragino Mincho ProN','Zen Old Mincho','Songti SC',serif" font-size="38" font-weight="700" fill="#f1eaef" text-anchor="middle">Sectors</text>
+<text x="500" y="106" font-family="'Cascadia Code','Consolas','SFMono-Regular',ui-monospace,monospace" font-size="12" letter-spacing="4" fill="#a99fb0" text-anchor="middle">WHERE I FIGHT</text>
+<g transform="translate(500,124)">
+  <rect x="-110" y="0" width="90" height="1.4" fill="url(#rosefade)"/>
+  <rect x="-4" y="-4" width="9" height="9" rx="1.5" transform="rotate(45 0 0)" fill="#f48fb1"/>
+  <rect x="20" y="0" width="90" height="1.4" fill="url(#rosefade)" transform="scale(-1,1)"/>
+</g>
+<rect x="0" y="148" width="487" height="94" rx="16" fill="#15111a" stroke="#2f2636" stroke-width="1"/>
+<text x="30" y="210" font-family="'Yu Mincho','Hiragino Mincho ProN','Zen Old Mincho','Songti SC',serif" font-size="42" fill="#f48fb1">水</text>
+<text x="82" y="182" font-family="'Yu Gothic','Hiragino Kaku Gothic ProN','Zen Kaku Gothic New',system-ui,sans-serif" font-size="18" font-weight="700" fill="#f1eaef">Frontend</text>
+<text x="82" y="201" font-family="'Cascadia Code','Consolas','SFMono-Regular',ui-monospace,monospace" font-size="12" fill="#e8a86a">Mizu no Kokyuu</text>
+<text x="82" y="220" font-family="'Yu Gothic','Hiragino Kaku Gothic ProN','Zen Kaku Gothic New',system-ui,sans-serif" font-size="12.5" fill="#a99fb0">Interfaces that flow — React, motion, and design</text>
+<text x="82" y="236" font-family="'Yu Gothic','Hiragino Kaku Gothic ProN','Zen Kaku Gothic New',system-ui,sans-serif" font-size="12.5" fill="#a99fb0">systems with care.</text>
+<rect x="513" y="148" width="487" height="94" rx="16" fill="#15111a" stroke="#2f2636" stroke-width="1"/>
+<text x="543" y="210" font-family="'Yu Mincho','Hiragino Mincho ProN','Zen Old Mincho','Songti SC',serif" font-size="42" fill="#e8a86a">炎</text>
+<text x="595" y="182" font-family="'Yu Gothic','Hiragino Kaku Gothic ProN','Zen Kaku Gothic New',system-ui,sans-serif" font-size="18" font-weight="700" fill="#f1eaef">Backend</text>
+<text x="595" y="201" font-family="'Cascadia Code','Consolas','SFMono-Regular',ui-monospace,monospace" font-size="12" fill="#e8a86a">Honoo no Kokyuu</text>
+<text x="595" y="220" font-family="'Yu Gothic','Hiragino Kaku Gothic ProN','Zen Kaku Gothic New',system-ui,sans-serif" font-size="12.5" fill="#a99fb0">APIs and services that hold the line under heavy</text>
+<text x="595" y="236" font-family="'Yu Gothic','Hiragino Kaku Gothic ProN','Zen Kaku Gothic New',system-ui,sans-serif" font-size="12.5" fill="#a99fb0">load.</text>
+<rect x="0" y="256" width="487" height="94" rx="16" fill="#15111a" stroke="#2f2636" stroke-width="1"/>
+<text x="30" y="318" font-family="'Yu Mincho','Hiragino Mincho ProN','Zen Old Mincho','Songti SC',serif" font-size="42" fill="#d9b86a">雷</text>
+<text x="82" y="290" font-family="'Yu Gothic','Hiragino Kaku Gothic ProN','Zen Kaku Gothic New',system-ui,sans-serif" font-size="18" font-weight="700" fill="#f1eaef">AI &amp; ML</text>
+<text x="82" y="309" font-family="'Cascadia Code','Consolas','SFMono-Regular',ui-monospace,monospace" font-size="12" fill="#e8a86a">Kaminari no Kokyuu</text>
+<text x="82" y="328" font-family="'Yu Gothic','Hiragino Kaku Gothic ProN','Zen Kaku Gothic New',system-ui,sans-serif" font-size="12.5" fill="#a99fb0">Fast, focused models — retrieval, agents,</text>
+<text x="82" y="344" font-family="'Yu Gothic','Hiragino Kaku Gothic ProN','Zen Kaku Gothic New',system-ui,sans-serif" font-size="12.5" fill="#a99fb0">inference at the edge.</text>
+<rect x="513" y="256" width="487" height="94" rx="16" fill="#15111a" stroke="#2f2636" stroke-width="1"/>
+<text x="543" y="318" font-family="'Yu Mincho','Hiragino Mincho ProN','Zen Old Mincho','Songti SC',serif" font-size="42" fill="#8fc07a">風</text>
+<text x="595" y="290" font-family="'Yu Gothic','Hiragino Kaku Gothic ProN','Zen Kaku Gothic New',system-ui,sans-serif" font-size="18" font-weight="700" fill="#f1eaef">Infra</text>
+<text x="595" y="309" font-family="'Cascadia Code','Consolas','SFMono-Regular',ui-monospace,monospace" font-size="12" fill="#e8a86a">Kaze no Kokyuu</text>
+<text x="595" y="328" font-family="'Yu Gothic','Hiragino Kaku Gothic ProN','Zen Kaku Gothic New',system-ui,sans-serif" font-size="12.5" fill="#a99fb0">Scale, reliability, and pipelines that never</text>
+<text x="595" y="344" font-family="'Yu Gothic','Hiragino Kaku Gothic ProN','Zen Kaku Gothic New',system-ui,sans-serif" font-size="12.5" fill="#a99fb0">sleep.</text>
+</svg>

@@ -1,0 +1,36 @@
+name: Daily Japanese Quote
+
+# Refreshes assets/quote.svg with a new proverb each day.
+# Requires nothing but Actions enabled (Settings ▸ Actions ▸ Allow).
+on:
+  schedule:
+    - cron: "0 21 * * *"   # 06:00 JST (21:00 UTC)
+  workflow_dispatch:        # manual "Run workflow" button
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Regenerate the daily quote
+        run: python build_svgs.py
+
+      - name: Commit if it changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/quote.svg
+          if git diff --cached --quiet; then
+            echo "No change today."
+          else
+            git commit -m "chore: daily Japanese quote 🌸"
+            git push
+          fi
