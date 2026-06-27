@@ -10,10 +10,12 @@
   TODO before you ship — search "TODO:" below:
     • GitHub username  (placeholders use "dearie")
     • LinkedIn / X handles + email
-  The telemetry numbers are tasteful placeholders — edit build_svgs.py
-  (stats / langs / streak) and re-run, or ask to wire live widgets.
-  The Word of the Day refreshes daily on its own once GitHub Actions is
-  enabled (.github/workflows/daily-quote.yml).
+  Telemetry + Word of the Day refresh DAILY via GitHub Actions
+  (.github/workflows/daily-quote.yml): the proverb rotates and the stats
+  (stars / commits / PRs / issues / reviews / top languages / streak /
+  activity) are fetched LIVE from the GitHub API. Set GH_USER in that
+  workflow to the real username and enable Actions. Until then telemetry
+  shows placeholder numbers.
   ===================================================================
 -->
 
@@ -46,11 +48,10 @@
 <!-- ============================ TELEMETRY ============================ -->
 <img src="assets/telemetry.svg" width="100%" alt="Telemetry — GitHub stats, streak, languages, activity" />
 
-<!--
-  Want LIVE GitHub data instead of the styled placeholders above?
-  Give me your username and I'll wire themed github-readme-stats /
-  streak / top-langs cards (rose + dark) to match this design.
--->
+<!-- This card is rendered from LIVE GitHub data by the daily Action:
+     stars / commits / PRs / issues / reviews / top languages (with real
+     GitHub colors) / current streak / contribution activity, all fetched
+     via GraphQL. Set GH_USER in the workflow to populate it. -->
 
 <!-- ========================= MISSION BOARD ========================= -->
 <img src="assets/mission.svg" width="100%" alt="Mission Board — objectives this arc" />

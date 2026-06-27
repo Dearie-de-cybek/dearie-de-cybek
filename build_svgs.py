@@ -9,7 +9,7 @@ rendered client-side — so the "real website" look survives the sanitizer.
 
 Run:  python build_svgs.py
 """
-import pathlib, base64, datetime
+import pathlib, base64, datetime, os, json, urllib.request
 
 ROOT = pathlib.Path(__file__).parent
 ASSETS = ROOT / "assets"
@@ -321,17 +321,85 @@ def intermission():
 
 
 # =============================================================================
+# LIVE GITHUB STATS  — fetched in the daily Action (GH_USER + GH_TOKEN env).
+# Falls back to placeholders when no token/username (e.g. local builds).
+# =============================================================================
+def fmt(n):
+    return f"{n:,}"
+
+_GQL = """query($login:String!){ user(login:$login){
+  repositories(first:100, ownerAffiliations:OWNER, isFork:false, orderBy:{field:STARGAZERS,direction:DESC}){
+    nodes{ stargazerCount languages(first:8){edges{size node{name color}}} } }
+  pullRequests{totalCount} issues{totalCount}
+  repositoriesContributedTo(includeUserRepositories:false, contributionTypes:[COMMIT,PULL_REQUEST,ISSUE,REPOSITORY]){totalCount}
+  contributionsCollection{ totalCommitContributions totalPullRequestReviewContributions
+    contributionCalendar{ weeks{ contributionDays{ date contributionCount } } } }
+}}"""
+
+def fetch_stats():
+    user=os.environ.get("GH_USER"); token=os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN")
+    if not user or not token:
+        return None
+    try:
+        body=json.dumps({"query":_GQL,"variables":{"login":user}}).encode()
+        req=urllib.request.Request("https://api.github.com/graphql", data=body, headers={
+            "Authorization":f"bearer {token}","Content-Type":"application/json","User-Agent":"dearie-readme"})
+        with urllib.request.urlopen(req, timeout=25) as r:
+            u=json.load(r)["data"]["user"]
+        if not u: return None
+        repos=u["repositories"]["nodes"]
+        cc=u["contributionsCollection"]
+        # languages -> top 5 + Other
+        sizes={}; cols={}
+        for n in repos:
+            for e in n["languages"]["edges"]:
+                nm=e["node"]["name"]; sizes[nm]=sizes.get(nm,0)+e["size"]; cols[nm]=e["node"]["color"]
+        tot=sum(sizes.values()) or 1
+        fb=[ROSE,WIS,"#3fc7d8",EMBER,BAMBOO]; langs=[]; acc=0
+        for i,(nm,sz) in enumerate(sorted(sizes.items(), key=lambda x:-x[1])[:5]):
+            pct=round(sz/tot*100); acc+=pct; langs.append((nm,pct,cols.get(nm) or fb[i%5]))
+        if langs and acc<100: langs.append(("Other",100-acc,BAMBOO))
+        # streak from calendar
+        days=[d["contributionCount"] for w in cc["contributionCalendar"]["weeks"] for d in w["contributionDays"]]
+        cur=0
+        for i in range(len(days)-1,-1,-1):
+            if days[i]>0: cur+=1
+            elif i==len(days)-1: continue   # today not committed yet — streak still alive
+            else: break
+        longest=run=0
+        for c in days:
+            run=run+1 if c>0 else 0; longest=max(longest,run)
+        return {
+            "stats":[("Total Stars",fmt(sum(n["stargazerCount"] for n in repos))),
+                     ("Commits (1y)",fmt(cc["totalCommitContributions"])),
+                     ("Pull Requests",fmt(u["pullRequests"]["totalCount"])),
+                     ("Issues",fmt(u["issues"]["totalCount"])),
+                     ("Contributed to",fmt(u["repositoriesContributedTo"]["totalCount"])),
+                     ("Reviews",fmt(cc["totalPullRequestReviewContributions"]))],
+            "langs":langs or None, "streak":cur, "longest":longest, "recent":days[-30:]}
+    except Exception as ex:
+        print("  stats fetch failed — using placeholders:", ex); return None
+
+
+# =============================================================================
 # TELEMETRY (脈) — stats + streak + langs + activity
 # =============================================================================
 def telemetry():
-    stats=[("Total Stars","2.6k"),("Commits (2026)","1,284"),("Pull Requests","312"),
+    d=fetch_stats()
+    stats=d["stats"] if d else [("Total Stars","2.6k"),("Commits (2026)","1,284"),("Pull Requests","312"),
            ("Issues Closed","148"),("Contributed to","27"),("Reviews","410")]
-    langs=[("TypeScript",34,"#56a8e8"),("Python",24,WIS),("Go",18,"#3fc7d8"),
+    langs=(d and d["langs"]) or [("TypeScript",34,"#56a8e8"),("Python",24,WIS),("Go",18,"#3fc7d8"),
            ("Rust",14,EMBER),("Other",10,BAMBOO)]
-    # activity path
+    streak=d["streak"] if d else 47
+    longest=d["longest"] if d else 96
+    # activity path — real recent contributions when available, else a calm synthetic wave
     import math
-    W,H,n,pad=920,150,26,10
-    vals=[55+44*abs(math.sin(i*0.55))+i*1.4+abs(math.sin(i*3.3))*14 for i in range(n)]
+    pad,H=10,150
+    if d and d.get("recent"):
+        rc=d["recent"]; mx=max(rc) or 1; vals=[8+(c/mx)*120 for c in rc]
+    else:
+        vals=[55+44*abs(math.sin(i*0.55))+i*1.4+abs(math.sin(i*3.3))*14 for i in range(26)]
+    n=len(vals); W=920
     X=lambda i:(i/(n-1))*(W-pad*2)+pad
     Y=lambda v:H-pad-min(H-pad,v)*0.82
     line=f"M {X(0):.1f} {Y(vals[0]):.1f}"
@@ -366,8 +434,8 @@ def telemetry():
     out.append(f'<text x="813" y="180" font-family="{MONO}" font-size="11" letter-spacing="2" fill="{MUT}" text-anchor="middle">CURRENT STREAK</text>')
     out.append(f'<text class="flame" x="813" y="236" font-family="{SERIF}" font-size="58" fill="{EMBER}" text-anchor="middle">火</text>')
     out.append(f'<circle cx="813" cy="216" r="40" fill="none" stroke="{EMBER}" stroke-width="2" stroke-opacity="0.6"/>')
-    out.append(f'<text x="813" y="286" font-family="{MONO}" font-size="30" font-weight="700" fill="{EMBER}" text-anchor="middle">47</text>')
-    out.append(f'<text x="813" y="308" font-family="{SANS}" font-size="12" fill="{MUT}" text-anchor="middle">days · longest 96</text>')
+    out.append(f'<text x="813" y="286" font-family="{MONO}" font-size="30" font-weight="700" fill="{EMBER}" text-anchor="middle">{streak}</text>')
+    out.append(f'<text x="813" y="308" font-family="{SANS}" font-size="12" fill="{MUT}" text-anchor="middle">days · longest {longest}</text>')
     # languages
     out.append(panel_bg(0,352,1000,150,16,PANEL))
     out.append(f'<text x="34" y="388" font-family="{SERIF}" font-size="18" font-weight="600" fill="{ROSE}">Most Used Breathing — Top Languages</text>')

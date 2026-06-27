@@ -1,7 +1,9 @@
-name: Daily Japanese Quote
+name: Daily refresh — quote + GitHub stats
 
-# Refreshes assets/quote.svg with a new proverb each day.
-# Requires nothing but Actions enabled (Settings ▸ Actions ▸ Allow).
+# Each day: picks a new Japanese proverb AND fetches live GitHub stats
+# (stars, commits, PRs, issues, reviews, top languages, streak, activity)
+# straight from the GraphQL API, then re-renders quote.svg + telemetry.svg.
+# Enable Actions (Settings ▸ Actions ▸ Allow). GITHUB_TOKEN is automatic.
 on:
   schedule:
     - cron: "0 21 * * *"   # 06:00 JST (21:00 UTC)
@@ -20,17 +22,20 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Regenerate the daily quote
+      - name: Regenerate quote + live stats
+        env:
+          GH_USER: dearie                      # TODO: set to the real GitHub username
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python build_svgs.py
 
-      - name: Commit if it changed
+      - name: Commit if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/quote.svg
+          git add assets/quote.svg assets/telemetry.svg
           if git diff --cached --quiet; then
             echo "No change today."
           else
-            git commit -m "chore: daily Japanese quote 🌸"
+            git commit -m "chore: daily quote + GitHub stats 🌸"
             git push
           fi
