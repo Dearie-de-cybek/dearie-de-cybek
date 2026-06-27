@@ -369,6 +369,10 @@ def fetch_stats():
         longest=run=0
         for c in days:
             run=run+1 if c>0 else 0; longest=max(longest,run)
+        # weekly totals, lightly smoothed -> rounded activity curve (not spiky daily)
+        weekly=[sum(dd["contributionCount"] for dd in w["contributionDays"])
+                for w in cc["contributionCalendar"]["weeks"]][-20:]
+        recent=[sum(weekly[max(0,i-2):i+3])/len(weekly[max(0,i-2):i+3]) for i in range(len(weekly))]
         return {
             "stats":[("Total Stars",fmt(sum(n["stargazerCount"] for n in repos))),
                      ("Commits (1y)",fmt(cc["totalCommitContributions"])),
@@ -376,7 +380,7 @@ def fetch_stats():
                      ("Issues",fmt(u["issues"]["totalCount"])),
                      ("Contributed to",fmt(u["repositoriesContributedTo"]["totalCount"])),
                      ("Reviews",fmt(cc["totalPullRequestReviewContributions"]))],
-            "langs":langs or None, "streak":cur, "longest":longest, "recent":days[-30:]}
+            "langs":langs or None, "streak":cur, "longest":longest, "recent":recent}
     except Exception as ex:
         print("  stats fetch failed — using placeholders:", ex); return None
 

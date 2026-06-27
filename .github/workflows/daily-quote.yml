@@ -24,7 +24,7 @@ jobs:
 
       - name: Regenerate quote + live stats
         env:
-          GH_USER: dearie                      # TODO: set to the real GitHub username
+          GH_USER: dearie-de-cybek
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python build_svgs.py
 

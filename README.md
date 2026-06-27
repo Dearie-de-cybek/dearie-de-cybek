@@ -27,7 +27,7 @@
 <img src="assets/divider.svg" width="100%" alt="" />
 
 <!-- TODO: replace "dearie" with your real GitHub username -->
-<img src="https://komarev.com/ghpvc/?username=dearie&style=flat-square&color=f48fb1&label=PROFILE+VIEWS" alt="views" />
+<img src="https://komarev.com/ghpvc/?username=dearie-de-cybek&style=flat-square&color=f48fb1&label=PROFILE+VIEWS" alt="views" />
 <img src="https://img.shields.io/badge/%E7%B7%8F%E9%9B%86%E4%B8%AD-TOTAL_CONCENTRATION-e8a86a?style=flat-square&labelColor=15111a" alt="total concentration" />
 <img src="https://img.shields.io/badge/●_open_to_missions-8fc07a?style=flat-square&labelColor=15111a" alt="" />
 
@@ -70,7 +70,7 @@
 <div align="center">
 
 <!-- TODO: replace handles + email with your real ones -->
-<a href="https://github.com/dearie"><img src="https://img.shields.io/badge/GitHub-15111a?style=for-the-badge&logo=github&logoColor=f48fb1" alt="github" /></a>
+<a href="https://github.com/dearie-de-cybek"><img src="https://img.shields.io/badge/GitHub-15111a?style=for-the-badge&logo=github&logoColor=f48fb1" alt="github" /></a>
 <a href="https://linkedin.com/in/dearie"><img src="https://img.shields.io/badge/LinkedIn-15111a?style=for-the-badge&logo=linkedin&logoColor=b69ce0" alt="linkedin" /></a>
 <a href="https://x.com/dearie"><img src="https://img.shields.io/badge/X-15111a?style=for-the-badge&logo=x&logoColor=f1eaef" alt="x" /></a>
 <a href="mailto:hello@dearie.dev"><img src="https://img.shields.io/badge/Email-d76a93?style=for-the-badge&logo=gmail&logoColor=white" alt="email" /></a>
