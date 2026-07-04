@@ -43,9 +43,9 @@
   <rect x="-4" y="-4" width="9" height="9" rx="1.5" transform="rotate(45 0 0)" fill="#f48fb1"/>
   <rect x="20" y="0" width="90" height="1.4" fill="url(#rosefade)" transform="scale(-1,1)"/>
 </g>
-<text x="500" y="196" font-family="'Yu Mincho','Hiragino Mincho ProN','Zen Old Mincho','Songti SC',serif" font-size="40" font-weight="700" fill="#f1eaef" text-anchor="middle">初心忘るべからず</text>
-<text x="500" y="226" font-family="'Cascadia Code','Consolas','SFMono-Regular',ui-monospace,monospace" font-size="14" font-style="italic" fill="#e8a86a" text-anchor="middle">Shoshin wasuru bekarazu</text>
-<text x="500" y="256" font-family="'Yu Gothic','Hiragino Kaku Gothic ProN','Zen Kaku Gothic New',system-ui,sans-serif" font-size="15" fill="#a99fb0" text-anchor="middle">Never forget your beginner's mind.</text>
+<text x="500" y="196" font-family="'Yu Mincho','Hiragino Mincho ProN','Zen Old Mincho','Songti SC',serif" font-size="40" font-weight="700" fill="#f1eaef" text-anchor="middle">千里の道も一歩から</text>
+<text x="500" y="226" font-family="'Cascadia Code','Consolas','SFMono-Regular',ui-monospace,monospace" font-size="14" font-style="italic" fill="#e8a86a" text-anchor="middle">Senri no michi mo ippo kara</text>
+<text x="500" y="256" font-family="'Yu Gothic','Hiragino Kaku Gothic ProN','Zen Kaku Gothic New',system-ui,sans-serif" font-size="15" fill="#a99fb0" text-anchor="middle">A journey of a thousand miles begins with one step.</text>
 <text x="40" y="290" font-family="'Cascadia Code','Consolas','SFMono-Regular',ui-monospace,monospace" font-size="10.5" letter-spacing="1" fill="#a99fb0" fill-opacity="0.5">ことわざ</text>
-<text x="960" y="290" font-family="'Cascadia Code','Consolas','SFMono-Regular',ui-monospace,monospace" font-size="10.5" letter-spacing="1" fill="#a99fb0" fill-opacity="0.5" text-anchor="end">2026-07-03 · refreshed daily</text>
+<text x="960" y="290" font-family="'Cascadia Code','Consolas','SFMono-Regular',ui-monospace,monospace" font-size="10.5" letter-spacing="1" fill="#a99fb0" fill-opacity="0.5" text-anchor="end">2026-07-04 · refreshed daily</text>
 </svg>
