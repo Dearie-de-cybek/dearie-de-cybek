@@ -45,7 +45,7 @@
 <text x="286" y="224" font-family="'Cascadia Code','Consolas','SFMono-Regular',ui-monospace,monospace" font-size="14" font-weight="700" fill="#f1eaef" text-anchor="end">5</text>
 <rect x="34" y="231" width="252" height="1" fill="#2f2636" stroke-dasharray="3 3"/>
 <text x="320" y="224" font-family="'Yu Gothic','Hiragino Kaku Gothic ProN','Zen Kaku Gothic New',system-ui,sans-serif" font-size="13" fill="#a99fb0">Commits (1y)</text>
-<text x="572" y="224" font-family="'Cascadia Code','Consolas','SFMono-Regular',ui-monospace,monospace" font-size="14" font-weight="700" fill="#f1eaef" text-anchor="end">854</text>
+<text x="572" y="224" font-family="'Cascadia Code','Consolas','SFMono-Regular',ui-monospace,monospace" font-size="14" font-weight="700" fill="#f1eaef" text-anchor="end">852</text>
 <rect x="320" y="231" width="252" height="1" fill="#2f2636" stroke-dasharray="3 3"/>
 <text x="34" y="258" font-family="'Yu Gothic','Hiragino Kaku Gothic ProN','Zen Kaku Gothic New',system-ui,sans-serif" font-size="13" fill="#a99fb0">Pull Requests</text>
 <text x="286" y="258" font-family="'Cascadia Code','Consolas','SFMono-Regular',ui-monospace,monospace" font-size="14" font-weight="700" fill="#f1eaef" text-anchor="end">46</text>
