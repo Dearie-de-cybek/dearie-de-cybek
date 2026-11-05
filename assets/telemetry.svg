@@ -63,7 +63,7 @@
 <text x="813" y="180" font-family="'Cascadia Code','Consolas','SFMono-Regular',ui-monospace,monospace" font-size="11" letter-spacing="2" fill="#a99fb0" text-anchor="middle">CURRENT STREAK</text>
 <text class="flame" x="813" y="236" font-family="'Yu Mincho','Hiragino Mincho ProN','Zen Old Mincho','Songti SC',serif" font-size="58" fill="#e8a86a" text-anchor="middle">火</text>
 <circle cx="813" cy="216" r="40" fill="none" stroke="#e8a86a" stroke-width="2" stroke-opacity="0.6"/>
-<text x="813" y="286" font-family="'Cascadia Code','Consolas','SFMono-Regular',ui-monospace,monospace" font-size="30" font-weight="700" fill="#e8a86a" text-anchor="middle">1</text>
+<text x="813" y="286" font-family="'Cascadia Code','Consolas','SFMono-Regular',ui-monospace,monospace" font-size="30" font-weight="700" fill="#e8a86a" text-anchor="middle">0</text>
 <text x="813" y="308" font-family="'Yu Gothic','Hiragino Kaku Gothic ProN','Zen Kaku Gothic New',system-ui,sans-serif" font-size="12" fill="#a99fb0" text-anchor="middle">days · longest 26</text>
 <rect x="0" y="352" width="1000" height="150" rx="16" fill="#15111a" stroke="#2f2636" stroke-width="1"/>
 <text x="34" y="388" font-family="'Yu Mincho','Hiragino Mincho ProN','Zen Old Mincho','Songti SC',serif" font-size="18" font-weight="600" fill="#f48fb1">Most Used Breathing — Top Languages</text>
